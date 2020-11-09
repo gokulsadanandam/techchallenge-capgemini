@@ -1,3 +1,7 @@
+<ng-container *ngIf="loading">
+	<div class="loader-overlay"></div>
+	<mat-spinner color="warn" diameter="40" class="container-center"></mat-spinner>
+</ng-container>
 <mat-toolbar color="primary" class="mat-elevation-z4 custom-toolbar">
 	<mat-icon>home</mat-icon>
 	<span class="pl1">Tech Challenge</span>
@@ -28,9 +32,9 @@
 					<div class="mat-h4">or</div>
 					<button mat-flat-button color="primary">Click here to Upload Image</button>
 				</div>
-				<div class="uploaded-image-preview" *ngIf="uploadedImage">
+				<!-- <div class="uploaded-image-preview" *ngIf="uploadedImage">
 					<img [src]="uploadedImage" width="200" height="200">
-        </div>
+        </div> -->
 				</div>
 		</mat-step>
 		<mat-step>

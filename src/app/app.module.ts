@@ -3,7 +3,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
-
+import { HttpClientModule } from "@angular/common/http";
 import { PortalModule } from "@angular/cdk/portal";
 import { ScrollingModule } from "@angular/cdk/scrolling";
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
@@ -55,6 +55,7 @@ import { DragDropModule } from "@angular/cdk/drag-drop";
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatAutocompleteModule,
     MatBadgeModule,
