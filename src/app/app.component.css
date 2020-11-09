@@ -11,9 +11,15 @@ p {
   margin: 0.5rem 1rem;
 }
 
+.image-uploader-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
 .image-uploader {
-  max-width: 480px;
-  padding: 1.5rem;
+  /* max-width: 480px; */
+  padding: 2.5rem;
   border: 1px dotted;
   text-align: center;
 }

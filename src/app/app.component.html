@@ -22,11 +22,16 @@
 			<ng-template matStepLabel>
 				Image Upload to S3 Bucket.
 			</ng-template>
-			<div class="image-uploader" (ondrop)="drop(event)" (ondragover)="allowDrop(event)">
-				<div class="mat-h3">Drag and Drop Image File Here</div>
-				<div class="mat-h4">or</div>
-				<button mat-flat-button color="primary">Click here to Upload Image</button>
-			</div>
+			<div class="image-uploader-container">
+				<div class="image-uploader" (drop)="drop($event)" (dragover)="allowDrop($event)">
+					<div class="mat-h3">Drag and Drop Image File Here</div>
+					<div class="mat-h4">or</div>
+					<button mat-flat-button color="primary">Click here to Upload Image</button>
+				</div>
+				<div class="uploaded-image-preview" *ngIf="uploadedImage">
+					<img [src]="uploadedImage" width="200" height="200">
+        </div>
+				</div>
 		</mat-step>
 		<mat-step>
 			<ng-template matStepLabel>

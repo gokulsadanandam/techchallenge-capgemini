@@ -8,18 +8,28 @@ import { MatSelectModule } from "@angular/material/select";
 })
 export class AppComponent {
   name = "TechChallenge";
-
+  uploadedImage: string | ArrayBuffer;
   drop(e) {
     e.preventDefault();
-    console.log("dropped!");
+    e.stopPropagation();
+    const fileList: object[] = e.dataTransfer.files;
+    if (fileList.length < 2) {
+      for (let i = 0; i < fileList.length; i++) {
+        let currentFile: any = fileList[i];
+        if (currentFile.type.match(/image.*/)) {
+          var reader = new FileReader();
+          reader.onload = fileReader => {
+            this.uploadedImage = fileReader.target.result;
+          };
+          reader.readAsDataURL(currentFile);
+        }
+      }
+    }
   }
 
   allowDrop(ev) {
-    console.log("hey");
+    ev.stopPropagation();
     ev.preventDefault();
-  }
-
-  drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
+    ev.dataTransfer.dropEffect = "copy";
   }
 }
