@@ -1,4 +1,43 @@
 <mat-toolbar color="primary" class="mat-elevation-z4 custom-toolbar">
-	<mat-icon>home</mat-icon>
+	<!-- <mat-icon>home</mat-icon> -->
 	<span>Tech Challenge</span>
 </mat-toolbar>
+
+<div class="container">
+	<div class="mat-title">Instructions</div>
+	<ol>
+		<li>
+			Upload a Image File that needs to processed to S3 bucket.
+		</li>
+		<li>
+			Navigate to the Sagemaker Portal to complete the human labelling task.
+		</li>
+		<li>
+			View the Extracted information from the image.
+		</li>
+	</ol>
+
+	<mat-vertical-stepper>
+		<mat-step>
+			<ng-template matStepLabel>
+				Image Upload to S3 Bucket.
+			</ng-template>
+			<div class="image-uploader" cdkDrop>
+				<div class="mat-h3">Drag and Drop Image File Here</div>
+				<div class="mat-h4">or</div>
+				<button mat-flat-button color="primary">Click here to Upload Image</button>
+			</div>
+		</mat-step>
+		<mat-step>
+			<ng-template matStepLabel>
+				Navigate to Sagemaker Portal to complete the labelling task.
+			</ng-template>
+		</mat-step>
+		<mat-step>
+			<ng-template matStepLabel>
+				Verify Results.
+			</ng-template>
+		</mat-step>
+	</mat-vertical-stepper>
+
+</div>

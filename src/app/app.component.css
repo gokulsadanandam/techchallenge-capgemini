@@ -5,3 +5,14 @@ p {
 .flex-auto {
   flex: 1 auto;
 }
+
+.container {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 1rem;
+}
+
+.image-uploader {
+  max-width: 480px;
+  min-height: 270px;
+  border: 1px dotted;
+}
