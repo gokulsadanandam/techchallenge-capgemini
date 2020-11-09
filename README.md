@@ -1,3 +1,2 @@
-# angular-9-material-starter-9hspuc
+# Capgemini TechChallenge
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-9-material-starter-9hspuc)
