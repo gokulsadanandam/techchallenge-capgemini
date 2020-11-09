@@ -23,8 +23,11 @@ jobs:
         run: npm install
       
       - name: Install @angular/cli
-        run: npm i -D -E @angular/cli
+        run: npm i -g @angular/cli
       
+      - name: Angular Version
+        run: ng --version
+        
       - name: Build
         run: ng build
 
