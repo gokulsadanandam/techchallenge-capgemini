@@ -21,16 +21,10 @@ jobs:
             ${{ runner.OS }}-
       - name: Install
         run: npm install
-      
-      - name: Install @angular/cli
-        run: npm i -g @angular/cli
-      
-      - name: Angular Version
-        run: ng --version
         
       - name: Build
-        run: ng build
-
+        run: npm run build:prod
+        
       - name: Deploy
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
